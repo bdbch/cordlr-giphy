@@ -45,11 +45,16 @@ class GiphyPlugin extends CordlrPlugin {
     if (requestUrl) {
       request(requestUrl, (error, response, body) => {
         if (error) {
-          this.sendInfo(message, 'Sorry but Giphy is not answering my phone calls', 'Giphy Request failed', this.embedFooter)
+          this.sendInfo(message, 'Sorry but Giphy is not answering my phone calls', 'Giphy Request failed', this.embedFooter, 'error')
+          return false
         }
 
         const bodyParsed = JSON.parse(body)
         if (bodyParsed.data) {
+          if (!bodyParsed.data.fixed_height_downsampled_url) {
+            this.sendInfo(message, 'We could not find any GIF related to this.', 'Giphy no GIF found', this.embedFooter, 'error')
+          }
+
           this.sendEmbed(message, {
             title: embedTitle,
             image: this.embedImage(bodyParsed.data.fixed_height_downsampled_url),
