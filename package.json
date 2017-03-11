@@ -1,0 +1,28 @@
+{
+  "name": "cordlr-giphy",
+  "version": "1.0.0",
+  "description": "Cordlr Plugin for random giphy images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/db2k/cordlr-giphy.git"
+  },
+  "keywords": [
+    "cordlr",
+    "giphy",
+    "memes"
+  ],
+  "author": "Dominik Biedebach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/db2k/cordlr-giphy/issues"
+  },
+  "homepage": "https://github.com/db2k/cordlr-giphy#readme",
+  "dependencies": {
+    "cordlr-plugin": "~0.0.5",
+    "request": "^2.81.0"
+  }
+}
