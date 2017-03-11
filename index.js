@@ -52,7 +52,7 @@ class GiphyPlugin extends CordlrPlugin {
         if (bodyParsed.data) {
           this.sendEmbed(message, {
             title: embedTitle,
-            image: this.embedImage(bodyParsed.data.image_original_url),
+            image: this.embedImage(bodyParsed.data.fixed_height_downsampled_url),
             footer: this.embedFooter
           })
         }
