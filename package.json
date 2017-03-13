@@ -1,6 +1,6 @@
 {
   "name": "cordlr-giphy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cordlr Plugin for random giphy images",
   "main": "index.js",
   "scripts": {
