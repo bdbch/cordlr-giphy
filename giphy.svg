@@ -1,0 +1,10 @@
+<svg class="giphy-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" itemprop="logo">
+    <g class="logo-icon" fill-rule="evenodd" clip-rule="evenodd">
+        <path class="logo-green" d="M0 3h4v29H0z"></path>
+        <path class="logo-purple" d="M24 11h4v21h-4z"></path>
+        <path class="logo-blue" d="M0 31h28v4H0z"></path>
+        <path class="logo-yellow" d="M0 0h16v4H0z"></path>
+        <path class="logo-red" d="M24 8V4h-4V0h-4v12h12V8"></path>
+        <path class="logo-shadow" d="M24 16v-4h4M16 0v4h-4"></path>
+    </g>
+</svg>
