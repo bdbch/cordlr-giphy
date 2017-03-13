@@ -9,7 +9,7 @@ class GiphyPlugin extends CordlrPlugin {
     this.name = 'Giphy'
     this.description = 'Randomly generates memes and stickers via Giphy'
 
-    this.footerLogo = config['cordl-giphy'].logo || 'http://i.imgur.com/VoJ9ysu.png'
+    this.footerLogo = 'http://i.imgur.com/VoJ9ysu.png'
 
     this.embedFooter = this.embedFooter('Giphy Cordlr Plugin - Powered by Giphy', this.footerLogo)
 
