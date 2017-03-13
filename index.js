@@ -7,7 +7,7 @@ class GiphyPlugin extends CordlrPlugin {
     super(bot, config)
 
     this.name = 'Giphy'
-    this.description = 'Randomly generates memes and stickers'
+    this.description = 'Randomly generates memes and stickers via Giphy'
 
     this.embedFooter = this.embedFooter('Giphy Cordlr Plugin - Powered by Giphy')
 
@@ -39,7 +39,7 @@ class GiphyPlugin extends CordlrPlugin {
 
     if (args[0]) {
       requestUrl += '&tag=' + encodeURI(args[0])
-      embedTitle += ' we found under the tag **' + args[0] + '**'
+      embedTitle += ' we found under the tag ' + args[0]
     }
 
     if (requestUrl) {
@@ -51,13 +51,13 @@ class GiphyPlugin extends CordlrPlugin {
 
         const bodyParsed = JSON.parse(body)
         if (bodyParsed.data) {
-          if (!bodyParsed.data.fixed_height_downsampled_url) {
+          if (!bodyParsed.data.image_url) {
             this.sendInfo(message, 'We could not find any GIF related to this.', 'Giphy no GIF found', this.embedFooter, 'error')
           }
 
           this.sendEmbed(message, {
             title: embedTitle,
-            image: this.embedImage(bodyParsed.data.fixed_height_downsampled_url),
+            image: this.embedImage(bodyParsed.data.image_url),
             footer: this.embedFooter
           })
         }
