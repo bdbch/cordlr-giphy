@@ -38,10 +38,11 @@ class GiphyPlugin extends CordlrPlugin {
     const apiUrl = 'http://api.giphy.com/v1/gifs/random?api_key=' + this.config.giphy.apikey
     let requestUrl = apiUrl
     let embedTitle = 'Here is your random Giphy'
+    const requestString = args.join(' ')
 
-    if (args[0]) {
-      requestUrl += '&tag=' + encodeURI(args[0])
-      embedTitle += ' we found under the tag ' + args[0]
+    if (requestString) {
+      requestUrl += '&tag=' + encodeURI(requestString)
+      embedTitle += ' we found under the tag ' + requestString
     }
 
     if (requestUrl) {
